@@ -1,0 +1,14 @@
+ccxt
+simplejson
+pybitflyer
+requests
+datetime
+pandas
+pytz
+websocket-client
+matplotlib
+discord
+pillow
+bitmex
+ta-lib
+selenium
