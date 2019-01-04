@@ -2,7 +2,7 @@
 
 sudo cp -p /etc/sysctl.conf /etc/sysctl.conf.org
 
-cp ~/ubuntu/sysctl.conf /tmp
+cp ~/kali/sysctl.conf /tmp
 
 sudo cp /tmp/sysctl.conf /etc/sysctl.conf
 
