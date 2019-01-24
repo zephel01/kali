@@ -5,9 +5,6 @@ cd ~/kali &&
 ./python_install.sh
 
 cd ~/kali &&
-./python_update.sh
-
-cd ~/kali &&
 ./chrome_install.sh
 
 cd ~/kali &&
@@ -15,6 +12,3 @@ cd ~/kali &&
 
 cd ~/kali &&
 ./setup.sh
-
-cd ~/kali &&
-./timezone.sh
