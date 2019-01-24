@@ -29,12 +29,12 @@ EOF
 
 source $HOME/.bashrc
 
-pyenv install 3.6.5
-pyenv global 3.6.5
+pyenv install 3.6.8
+pyenv global 3.6.8
 
 pip install --upgrade pip
 
 ## pip install
-pip install -r ./requirements.txt
+pip install -r ~/kali/requirements.txt
 
 exec bash
