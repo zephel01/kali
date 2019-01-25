@@ -5,7 +5,7 @@ requests
 datetime
 pandas
 pytz
-websocket-client
+websocket-client==0.52.0
 matplotlib
 discord
 pillow
