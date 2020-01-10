@@ -12,10 +12,14 @@ echo $LANG
 localectl set-keymap jp106
 
 #jp
-apt remove fonts-vlgothic
-apt install fonts-vlgothic
-apt install ibus-anthy
-apt install zenity
+apt remove fonts-vlgothi -y
+apt install fonts-vlgothi -y
+apt install ibus-anthy -y
+apt install zenity -y
+
+#add package
+apt install terminator -y
+
 
 /usr/bin/im-config
 
