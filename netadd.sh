@@ -12,5 +12,3 @@ allow-hotplug eth1
 iface eth1 inet dhcp
 EOF
 
-/etc/init.d/networking stop
-/etc/init.d/networking start
