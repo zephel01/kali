@@ -1,15 +1,21 @@
 #!/bin/bash
 
-sudo cp -p /etc/sysctl.conf /etc/sysctl.conf.org
+#update
+apt update
+apt upgrade
 
-cp ~/kali/sysctl.conf /tmp
+#ch root password
+passwd
 
-sudo cp /tmp/sysctl.conf /etc/sysctl.conf
+#SET LANG
+sudo sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
+sudo locale-gen
+sudo update-locale LANG=ja_JP.UTF-8
+echo $LANG
 
-sudo bash -c "cat << 'EOF' >> /etc/security/limits.conf
-* soft nofile 65536
-* hard nofile 65536
-EOF"
+#jp
+apt remove fonts-vlgothic
+apt install fonts-vlgothic
+apt install ibus-anthy
 
-sudo /sbin/sysctl -p
-ulimit -a
+im-config
