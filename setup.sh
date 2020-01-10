@@ -4,12 +4,8 @@
 apt update
 apt upgrade
 
-#SET LANG
-sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
-/usr/sbin/locale-gen
-/usr/sbin/update-locale LANG=ja_JP.UTF-8
-echo $LANG
-/usr/bin/localectl set-keymap jp106
+#add package
+apt install terminator -y
 
 #jp
 apt remove fonts-vlgothic -y
@@ -17,9 +13,13 @@ apt install fonts-vlgothic -y
 apt install ibus-anthy -y
 apt install zenity -y
 
-#add package
-apt install terminator -y
-
+#SET LANG
+sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
+/usr/sbin/locale-gen
+/usr/sbin/locale-gen ja_JP.UTF-8
+/usr/sbin/dpkg-reconfigure locales
+echo $LANG
+/usr/bin/localectl set-keymap jp106
 
 /usr/bin/im-config
 
