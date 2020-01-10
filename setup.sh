@@ -15,8 +15,9 @@ localectl set-keymap jp106
 apt remove fonts-vlgothic
 apt install fonts-vlgothic
 apt install ibus-anthy
+apt install zenity
 
-im-config
+/usr/bin/im-config
 
 #ch root password
 passwd
