@@ -4,9 +4,6 @@
 apt update
 apt upgrade
 
-#ch root password
-passwd
-
 #SET LANG
 sudo sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
 sudo locale-gen
@@ -19,3 +16,6 @@ apt install fonts-vlgothic
 apt install ibus-anthy
 
 im-config
+
+#ch root password
+passwd
