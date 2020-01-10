@@ -12,8 +12,8 @@ echo $LANG
 /usr/bin/localectl set-keymap jp106
 
 #jp
-apt remove fonts-vlgothi -y
-apt install fonts-vlgothi -y
+apt remove fonts-vlgothic -y
+apt install fonts-vlgothic -y
 apt install ibus-anthy -y
 apt install zenity -y
 
