@@ -1,29 +1,24 @@
 #!/bin/bash
 
+chsh -s /bin/bash
+
 # pyenv install
+git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+git clone git://github.com/yyuu/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
-/usr/bin/git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-
-cd ~/.pyenv
-mkdir shims
-mkdir versions
-
-cat << 'EOF' >> ~/.bashrc
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+cat << 'EOF' >> ~/.bash_profile
+PYENV_ROOT=~/.pyenv
+export PATH=$PATH:$PYENV_ROOT/bin
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 EOF
 
-source $HOME/.bashrc
+source ~/.bash_profile
 
-pyenv install 3.6.8
-pyenv global 3.6.8
+pyenv install 3.6.5
+pyenv install 2.7.15
+pyenv global 3.6.5
+
+pyenv rehash
 
 pip install --upgrade pip
-
-## pip install
-pip install -r ~/kali/requirements.txt
-
-exec bash
