@@ -31,8 +31,8 @@ ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 date
 
 #ssh
-service ssh start
-update-rc.d ssh enable
+/usr/sbin/service ssh start
+/usr/sbin/update-rc.d ssh enable
 
 /usr/bin/im-config
 
