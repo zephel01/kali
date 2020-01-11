@@ -30,6 +30,10 @@ cp /etc/localtime /etc/localtime.org
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 date
 
+#ssh
+service ssh start
+update-rc.d ssh enable
+
 /usr/bin/im-config
 
 #ch root password
