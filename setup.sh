@@ -23,7 +23,7 @@ sed -i -e 's/pc105/jp106/g' /etc/default/keyboard
 sed -i -e 's/us/jp/g' /etc/default/keyboard
 sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
 /usr/sbin/locale-gen
-/usr/sbin/update-locale
+/usr/sbin/update-locale LANG=ja_JP.UTF-8
 /usr/bin/localectl set-locale LANG=ja_JP.UTF-8 LANGUAGE="ja_JP:ja"
 
 /usr/bin/setxkbmap jp
