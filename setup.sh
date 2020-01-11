@@ -25,6 +25,7 @@ sed -i -e 's/us/jp/g' /etc/default/keyboard
 /usr/bin/setxkbmap jp
 service keyboard-setup restart
 source /etc/default/locale
+localectl
 echo $LANG
 
 #Time zone
