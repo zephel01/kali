@@ -7,14 +7,14 @@ apt upgrade
 #add package
 apt install terminator -y
 
-#jp
+#jp package
 apt remove fonts-vlgothic -y
 apt install fonts-vlgothic -y
 apt install ibus-anthy -y
 apt install zenity -y
 apt install locales -y
 
-#SET LANG
+#SET LANG & keyboad setting
 echo $LANG
 cp /etc/default/locale /etc/default/locale.org
 sed -i -e 's/en_US.UTF-8/ja_JP.UTF-8/g' /etc/default/locale
@@ -22,10 +22,9 @@ cp /etc/default/keyboard /etc/default/keyboard.org
 sed -i -e 's/pc105/jp106/g' /etc/default/keyboard
 sed -i -e 's/us/jp/g' /etc/default/keyboard
 /usr/bin/setxkbmap jp
+service keyboard-setup restart
 source /etc/default/locale
 echo $LANG
-
-service keyboard-setup restart
 
 #Time zone
 cp /etc/localtime /etc/localtime.org
