@@ -25,6 +25,11 @@ apt install locales -y
 /usr/bin/localectl set-keymap jp106 LANG=ja_JP.UTF-8 LANGUAGE="ja_JP:ja"
 echo $LANG
 
+#Time zone
+cp /etc/localtime /etc/localtime.org
+ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+date
+
 /usr/bin/im-config
 
 #ch root password
