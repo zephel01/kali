@@ -17,6 +17,9 @@ apt install locales -y
 #SET LANG
 echo $LANG
 #sed -i -e 's/en_US.UTF-8/ja_JP.UTF-8/g' /etc/default/locale
+cp /etc/default/keyboard /etc/default/keyboard.org
+sed -i -e 's/pc105/jp106/g' /etc/default/keyboard
+sed -i -e 's/us/jp/g' /etc/default/keyboard
 /usr/bin/localectl set-keymap jp106
 /usr/bin/localectl set-local ja_JP.UTF-8
 source /etc/default/locale
