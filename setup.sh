@@ -21,7 +21,7 @@ sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
 /usr/sbin/update-locale LANG=ja_JP.UTF-8
 sed -i -e 's/en_US.UTF-8/ja_JP.UTF-8/g' /etc/default/locale
 echo $LANG
-/usr/bin/localectl set-keymap jp106
+/usr/bin/localectl set-keymap jp106 LANG=ja_JP.UTF-8
 
 /usr/bin/im-config
 
