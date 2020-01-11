@@ -28,7 +28,7 @@ sed -i -e 's/# ja_JP.UTF-8/ja_JP.UTF-8/g' /etc/locale.gen
 
 /usr/bin/setxkbmap jp
 /usr/sbin/service keyboard-setup restart
-source /etc/default/locale
+#source /etc/default/locale
 /usr/bin/localectl
 echo $LANG
 
