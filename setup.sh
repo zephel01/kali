@@ -23,7 +23,7 @@ cp /etc/default/locale /etc/default/locale.org
 cp /etc/default/keyboard /etc/default/keyboard.org
 sed -i -e 's/pc105/jp106/g' /etc/default/keyboard
 sed -i -e 's/us/jp/g' /etc/default/keyboard
-/usr/sbin/locale-gen --purge --no-archive
+#/usr/sbin/locale-gen --purge --no-archive
 sed -i -e 's/# $LANG/$LANG/g' /etc/locale.gen
 /usr/sbin/locale-gen
 /usr/sbin/dpkg-reconfigure -f noninteractive locales
