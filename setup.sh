@@ -14,7 +14,7 @@ apt install ibus-anthy -y
 apt install zenity -y
 apt install locales -y
 apt install locales-all -y
-apt install localepurge
+#apt install localepurge -y
 
 #SET LANG & keyboad setting
 echo $LANG
