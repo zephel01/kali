@@ -32,7 +32,8 @@ sed -i -e 's/# $LANG/$LANG/g' /etc/locale.gen
 
 /usr/bin/setxkbmap jp
 /usr/sbin/service keyboard-setup restart
-#source /etc/default/locale
+echo "source /etc/default/locale" >> ~/.bashrc
+source ~/.bashrc
 /usr/bin/localectl
 echo $LANG
 
