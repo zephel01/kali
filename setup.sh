@@ -37,6 +37,8 @@ source ~/.bashrc
 /usr/bin/localectl
 echo $LANG
 
+sed -i -e 's/default/ibus/g' /etc/X11/xinit/xinputrc
+
 #Time zone
 cp /etc/localtime /etc/localtime.org
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
@@ -45,6 +47,4 @@ date
 #ssh
 /usr/sbin/service ssh start
 /usr/sbin/update-rc.d ssh enable
-
-/usr/bin/im-config
 
