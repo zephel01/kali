@@ -15,11 +15,6 @@ Vagrant.configure("2") do |config|
   end
 
   # Provision the machine with a shell script
-  config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
-    apt-get install -y crowbar
-  SHELL
-
   config.vm.provision :shell, :path => "setup.sh"
 
 end
