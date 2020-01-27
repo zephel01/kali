@@ -13,6 +13,8 @@ apt install fonts-vlgothic -y
 apt install ibus-anthy -y
 apt install zenity -y
 apt install locales -y
+apt install locales-all -y
+apt install man2html
 
 ##SET LANG & keyboad setting
 echo $LANG
