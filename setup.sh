@@ -3,7 +3,7 @@
 ##update
 export DEBIAN_FRONTEND=noninteractive
 sudo -E apt-get update
-sudo -E apt-get install -y -qq keyboard-configuration
+sudo -E apt-get upgrade -y
 
 ##add package
 apt install terminator -y
