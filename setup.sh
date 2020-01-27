@@ -1,11 +1,13 @@
 #!/bin/bash
 
 ##update
-apt update
-apt upgrade
+export DEBIAN_FRONTEND=noninteractive
+sudo -E apt-get update
+sudo -E apt-get install -y -qq keyboard-configuration
 
 ##add package
 apt install terminator -y
+apt install zlib1g-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev
 
 ##jp package
 apt remove fonts-vlgothic -y
