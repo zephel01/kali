@@ -16,7 +16,7 @@ apt install ibus-anthy -y
 apt install zenity -y
 apt install locales -y
 apt install locales-all -y
-apt install man2html
+apt install man2html man2html-base -y
 
 ##SET LANG & keyboad setting
 echo $LANG
