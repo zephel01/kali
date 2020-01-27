@@ -2,7 +2,7 @@
 
 ##update
 export DEBIAN_FRONTEND=noninteractive
-#sudo -E apt-get update
+sudo -E apt-get update
 #sudo -E apt-get upgrade -y
 
 ##add package
