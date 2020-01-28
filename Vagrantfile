@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "kalilinux/rolling"
+  config.ssh.insert_key = false
 
   # Create a private network. In VirtualBox, this is a Host-Only network
   config.vm.network "private_network", ip: "10.0.0.2"
