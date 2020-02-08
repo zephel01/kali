@@ -1,9 +1,10 @@
 # -*- mode: ruby -*-
+:q
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
   config.vm.box = "kalilinux/rolling"
-  config.vm.box_version = "2019.4.0"
+  config.vm.box_version = "2020.1.0"
   config.ssh.insert_key = false
   config.vm.boot_timeout = 600
 
