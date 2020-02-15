@@ -47,3 +47,13 @@ date
 /usr/sbin/service ssh start
 /usr/sbin/update-rc.d ssh enable
 
+##add network
+cat << 'EOF' >> /etc/network/interfaces
+allow-hotplug eth0
+iface eth0 inet dhcp
+
+allow-hotplug eth1
+iface eth1 inet static
+address 10.0.0.2
+netmask 255.255.255.0
+EOF
