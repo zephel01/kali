@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kalivm=`VBoxManage list vms|awk '{print $1}'|sed "s/\"//g"`
+kalivm=`VBoxManage list vms|grep kali|awk '{print $1}'|sed "s/\"//g"`
 
 vagrant halt
 
@@ -12,5 +12,4 @@ VBoxManage dhcpserver modify --ifname vboxnet0 --enable
 VBoxManage modifyvm $kalivm --nic1 nat --nictype1 virtio
 VBoxManage modifyvm $kalivm --nic2 hostonly --nictype2 virtio --hostonlyadapter2 vboxnet0
 
-#sleep 2
-#vagrant up
+VBoxManage startvm $kalivm
