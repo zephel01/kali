@@ -6,7 +6,7 @@ vagrant halt
 
 VBoxManage hostonlyif create 
 VBoxManage hostonlyif ipconfig vboxnet0 --ip 10.0.0.1
-VBoxManage dhcpserver add --ifname vboxnet0 --ip 10.0.0.2 --netmask 255.255.255.0 --lowerip 10.0.0.100 --upperip 10.0.0.200
+VBoxManage dhcpserver add --ifname vboxnet0 --ip 10.0.0.100 --netmask 255.255.255.0 --lowerip 10.0.0.101 --upperip 10.0.0.200
 VBoxManage dhcpserver modify --ifname vboxnet0 --enable
 
 VBoxManage modifyvm $kalivm --nic1 nat --nictype1 virtio
